@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    list-style-type: none;
+    background-color: black;
+    height: 70px;
+    
+   
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+}
+
+.nav li{
+    /* display: inline; */
+    margin:10px;
+    float: left;
+    margin-top: 18px;
+}
+
+.nav li:hover{
+    box-shadow: 1px 1px 50px antiquewhite;
+}
+.nav li:hover a{
+    font-size: 33px;
+}
+
+.nav li:last-child{
+    float:right;
+    margin-right:20px;
+}
+
+#togglecheckbox{
+    display:none;
+}
+
+.togglebox label {
+    background-color: black;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+ 
+}
+
+.togglebox label span{
+    width: 50px;     
+    height: 1px;
+    background-color: orange;
+    position: absolute;
+}
+.togglebox label span:nth-child(1){
+    top:10px;
+}
+.togglebox label span:nth-child(2){
+    top:25px;
+}
+.togglebox label span:nth-child(3){
+    top:40px;
+}
+
+#togglecheckbox:checked + .nav{
+    display: block;
+}
+@media (max-width:821px){
+    .nav li{width:100%;}
+    .nav li:last-child{float: left;}
+    .nav{height: 325px; display:none;}
+    .togglebox label {display: block;}
+}
+
+
