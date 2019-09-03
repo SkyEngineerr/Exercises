@@ -23,10 +23,32 @@
             title:'Darkness',
             date:'12.02.2019',
             displayMethod: function(){
+               return [this.author, this.title, this.date]
+            }
+        }
+
+        let arTicle2 = {
+            author:'Orhan Pamuk',
+            title:'Darkness',
+            date:'12.02.2019',
+            displayMethod: function(){
                return this.author +"</br>" + this.title +"</br>" + this.date
             }
         }
-        document.getElementById("demo").innerHTML = arTicle.displayMethod();
+        document.getElementById("demo").innerHTML = arTicle2.displayMethod();
+
+        function check () {
+            if(arTicle2.author == 'Orhan Pamuk') {
+                console.log('This is article2')
+            }
+            else {
+                console.log('This is article')
+            }
+        }
+
+        check()
+
+      
 
 
     </script>
