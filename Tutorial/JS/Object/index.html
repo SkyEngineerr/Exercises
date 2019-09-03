@@ -16,38 +16,48 @@
             color:'red',
             gears:'auto',
             maxSpeed:'240'
-        }
+        };
 
-        let arTicle = {
+        let article1 = {
             author:'Eren Yilmaz',
             title:'Darkness',
             date:'12.02.2019',
-            displayMethod: function(){
-               return [this.author, this.title, this.date]
+            displayMethod(){
+               return [this.author, this.title, this.date];
             }
-        }
+        };
 
-        let arTicle2 = {
+        let article2 = {
             author:'Orhan Pamuk',
             title:'Darkness',
             date:'12.02.2019',
-            displayMethod: function(){
+            displayMethod(){
                return this.author +"</br>" + this.title +"</br>" + this.date
             }
-        }
-        document.getElementById("demo").innerHTML = arTicle2.displayMethod();
+        };
+        document.getElementById("demo").innerHTML = article2.displayMethod();
 
-        function check () {
-            if(arTicle2.author == 'Orhan Pamuk') {
+        
+            if(article2.author == 'Orhan Pamuk') {
                 console.log('This is article2')
             }
-            else {
-                console.log('This is article')
-            }
-        }
 
-        check()
+        let articles = [article1, article2]
 
+        let articles = [article1, article2]
+        
+        console.log(articles[0])
+        console.log(articles[1])
+        console.log(articles[0].date)
+ 
+         for (i=0; i< articles.length; i++) {
+           if (articles[i].author == 'Eren Yilmaz'){
+             console.log('He is a student in our class')
+           }
+           else {
+             console.log("Orhan Pamuk not our class")
+           }
+         }
       
 
 
