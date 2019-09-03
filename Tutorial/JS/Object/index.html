@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        let car = {
+            speed:100,
+            color:'red',
+            gears:'auto',
+            maxSpeed:'240'
+        }
+
+        let arTicle = {
+            author:'Eren Yilmaz',
+            title:'Darkness',
+            date:'12.02.2019',
+            displayMethod: function(){
+               return this.author +"</br>" + this.title +"</br>" + this.date
+            }
+        }
+        document.getElementById("demo").innerHTML = arTicle.displayMethod();
+
+
+    </script>
+</body>
+</html>
