@@ -58,6 +58,39 @@
              console.log("Orhan Pamuk not our class")
            }
          }
+
+         let book1 = {
+         name:'Javascript',
+         author:'John',
+         status:'unread'
+        }
+       let book2 = {
+         name:'HTML',
+         author:'Tom',
+         status:'unread'
+        }
+       let book3 = {
+         name:'CSS',
+         author:'Mark',
+         status:'unread'
+        }
+
+let books =[book1, book2, book3];
+
+function checkBooks (arr, name) {
+  for (i=0; i< arr.length; i++) {
+    if (arr[i].name == name) {
+      arr[i].status = 'read';
+      
+    }
+}
+}
+
+checkBooks (books, 'CSS');
+console.log(book3)
+
+checkBooks (books, 'HTML');
+console.log(books)
       
 
 
