@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,24 @@
     <title>Float Navigation</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- ul.nav>li*5>a -->
-    <div class="togglebox">
-        <label for="togglecheckbox">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-    </div>
-    <input type="checkbox" id="togglecheckbox">
+
     <ul class="nav">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Language</a></li>
     </ul>
 </body>
+
 </html>
