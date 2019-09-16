@@ -1,4 +1,4 @@
-//Delete min number if array with a function
+//Delete min number if array with a function.
 
 let arr1 = [1, 2, 3, 4, 5];
 
