@@ -5,6 +5,7 @@
   animation: slider 20s;
   animation-iteration-count: infinite;
   background-size: cover;
+  animation-fill-mode: backwards;
 }
 
 @keyframes slider {
