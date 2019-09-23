@@ -141,3 +141,17 @@ let x = 'lazy';
 let y = 'smart';
 let z = replaceBy2(str2, x, y);
 console.log(z)
+
+/////////////////////// New Exercise
+
+function checkChar (password, name) {
+    if (password.length > 8 && password.includes('$') && !password.includes(name)){
+        console.log('valid')
+    }
+    else {
+        console.log('not valid')
+    }
+}
+
+
+checkChar('12213$asdseren', 'eren');
