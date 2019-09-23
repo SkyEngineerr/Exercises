@@ -40,4 +40,4 @@ function mixUp(string1, string2) {
 
 mixUp('Hello' , 'World');
 
-//new exercise
+/////new exercise
