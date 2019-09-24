@@ -145,13 +145,40 @@ console.log(z)
 /////////////////////// New Exercise
 
 function checkChar (password, name) {
-    if (password.length > 8 && password.includes('$') && !password.includes(name)){
+    if (password.length > 8 || password.includes('$') && !password.includes(name)){
         console.log('valid')
     }
     else {
-        console.log('not valid')
+        console.log('invalid')
     }
 }
 
 
-checkChar('12213$asdseren', 'eren');
+checkChar('asddas', 'eren');
+
+////////////// new exercise
+
+function trying (obj) {
+    
+
+    return `${obj.name} has population of ${obj.population} and is situated in ${obj.continent}`
+}
+
+let cityFacts = {
+    name:'Paris',
+    population:'100.000',
+    continent:'Asia'
+};
+
+
+document.write(trying(cityFacts));
+
+//////////// new exercise
+
+
+function myName (name) {
+    
+    document.write('Hello ' + name )
+}
+
+myName('Eren')
