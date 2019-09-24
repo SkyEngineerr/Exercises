@@ -46,3 +46,12 @@ function myFunction() {
   }
 
  checkPass();
+
+
+
+ let paragraph = 'The quick brown fox jumps over the lazy dog.' + 'if the dog barked, was it really lazzy?'
+ let str= 'dog';
+
+ let num = paragraph.indexOf(str)
+ document.write(num)
+
