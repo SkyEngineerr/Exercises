@@ -28,3 +28,21 @@ function myFunction() {
   }
 
   squared();
+
+
+
+  
+  function checkPass() {
+    var password = prompt("write your password");
+    
+
+    if (password.length > 8 && password.includes("$") ) {
+        document.write("valid");
+    }
+
+    else {
+        document.write ('invalid');
+      }
+  }
+
+ checkPass();
