@@ -49,9 +49,28 @@ function myFunction() {
 
 
 
- let paragraph = 'The quick brown fox jumps over the lazy dog.' + 'if the dog barked, was it really lazzy?'
- let str= 'dog';
+ let paragraph = 'The quick brown fox jumps over the lazy dog.'
+ let str = prompt('search for index of: ');
 
- let num = paragraph.indexOf(str)
- document.write(num)
+ let result = `Yes it is found in the position: ${paragraph.indexOf(str)}`
+ document.write(result);
 
+
+ function checkPassword (password, letter) {
+   let input = prompt(letter)
+   return `The position of ${input} is: ` + password.indexOf(input);
+ }
+
+
+
+ document.write(checkPassword('213213asd'));
+
+
+ function checkPassword (price) {
+  let input = prompt()
+  return price + input;
+}
+
+
+
+document.write(checkPassword(123));
