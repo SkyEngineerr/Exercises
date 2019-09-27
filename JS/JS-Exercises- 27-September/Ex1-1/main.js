@@ -82,17 +82,30 @@ let type= 'fantasy'
 
 function storyBuilder(array0fTitles, arrayOfParagraph,type) {
 
+  // for (let i in array0fTitles) {
+  //   if(array0fTitles[i].type == type){
+  //     for(let j in arrayOfParagraph) {
+  //       if (arrayOfParagraph[j].title == array0fTitles[i]){
+  //         console.log(array0fTitles[i].topic + ' ' +arrayOfParagraph[j].text)
+  //       }
+  //     }
+  //   }
+  // }
+  let title1;
+  let topic;
   for (let i in array0fTitles) {
     if(array0fTitles[i].type == type){
-      for(let j in arrayOfParagraph) {
-        if (arrayOfParagraph[j].title == array0fTitles[i]){
-          console.log(array0fTitles[i].topic + ' ' +arrayOfParagraph[j].text)
-        }
-      }
+      title1 = array0fTitles[i];
+      topic = array0fTitles[i].topic
+  }
+
+  for (let j in arrayOfParagraph) {
+    if (arrayOfParagraph[j].title == title1) {
+        console.log (topic + ' ' + arrayOfParagraph[j].text)
     }
   }
 
 }
+}
 
-
-storyBuilder([harryPotter, sherlock], [paragraph1, paragraph2], 'crime')
+storyBuilder([harryPotter, sherlock], [paragraph1, paragraph2], 'fantasy')
