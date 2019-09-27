@@ -1,30 +1,23 @@
-
-function check(city, pop){
-
-for (let i = 0; i<cities.name.length; i++){
-    if (cities.name[i] == city) {
-      for (let j = 0; j<cities.population.length; j++){
-        if (cities.population < pop){
-          console.log('yes')
-        }
-      }
-    }
+let city1 = {
+  name:'istanbul',
+  population:120000,
+}
+let city2 = {
+  name:'istanbul',
+  population:120000,
+}
+let city3 = {
+  name:'istanbul',
+  population:120000,
 }
 
+function tripAdvisor (arrayOfCities, arrayOfPreferences) {
+
 }
 
-let cities= {
-  name:['paris','istanbul'],
-  population:['120', '120000'],
-  continant:['Europe', 'Asia']
-}
 
-check('paris', 12);
 
-function checkCity (obj, city, pop) {
-  for (key in obj) {
-    console.log(key)
-  }
-}
+let arrayOfCities= ;
+let preferences =;
 
-checkCity();
+checkCity([city1, city2, city3], ['180000', 'Europa'] );
