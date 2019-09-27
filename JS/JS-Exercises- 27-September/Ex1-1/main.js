@@ -26,3 +26,37 @@ function tripAdvisor (arrayOfCities) {
 }
 
 tripAdvisor([city1, city2, city3]);
+
+
+// NEW EXERCISE */
+
+let city1 = {
+  name:'hamburg',
+  population:120,
+  continent: 'asia',
+  advice:'positive'
+}
+
+let city2 = {
+  name:'izmir',
+  population:7,
+  continent: 'europa',
+  advice:'negative'
+}
+
+let city3 = {
+  name:'istanbul',
+  population:11,
+  continent: 'usa',
+  advice:'positive'
+}
+
+function tripAdvisor (arrayOfCities, pref) {
+  for (let i in arrayOfCities) {
+    if(arrayOfCities[i].includes(120)) {
+      console.log('Yes')
+    }
+  }
+}
+
+tripAdvisor([city1,city2,city3], ['asia', 120]);
