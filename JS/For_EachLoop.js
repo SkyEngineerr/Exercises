@@ -28,3 +28,5 @@ function takeNumber (arr) {
 let example2 = [2, 3, 'Eren', 'Istanbul'];
 
 takeNumber(example2);
+
+//end
