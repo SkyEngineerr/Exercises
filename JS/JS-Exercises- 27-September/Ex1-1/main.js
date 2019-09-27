@@ -1,23 +1,28 @@
 let city1 = {
-  name:'istanbul',
-  population:120000,
+  name:'hamburg',
+  population:120,
 }
 let city2 = {
-  name:'istanbul',
-  population:120000,
+  name:'izmir',
+  population:7,
 }
 let city3 = {
   name:'istanbul',
-  population:120000,
+  population:11,
 }
 
-function tripAdvisor (arrayOfCities, arrayOfPreferences) {
+function tripAdvisor (arrayOfCities) {
+  let lowestNumber = arrayOfCities[0].population;
 
+  let min = arrayOfCities.forEach(function (keyValue, index, arrayOfCities) {
+    if(index > 0) {
+      if(keyValue.population < lowestNumber){
+        lowestNumber = keyValue.population;
+        arrayOfCities[index].advice = 'positive';
+        console.log( arrayOfCities[index])
+      }
+    }
+  });
 }
 
-
-
-let arrayOfCities= ;
-let preferences =;
-
-checkCity([city1, city2, city3], ['180000', 'Europa'] );
+tripAdvisor([city1, city2, city3]);
