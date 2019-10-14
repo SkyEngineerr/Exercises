@@ -64,14 +64,16 @@
 // document.write(checkCity(["Tokyo", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin", "Kalana", "Tokyo"]));
 
 
-function checkWord (word) {
-    if (word[word.length-1] == 's') {
-        return 'Plural'
-    }
-
-    return "It is not plural"
-
+function checkWord (myName, names) {
+    let memory = '';
+  for (let i =0; i<names.length; i++) {
+      if(myName.length == names[i].length) {
+          memory += `Welcome dear ${names[i]} <br>`
+          
+      }
+  }
+return memory;
 }
 
 
-document.write(checkWord('Tree'));
+document.write(checkWord('safwan', ['eren', 'meleke', 'ali', 'mahmud' ]));
