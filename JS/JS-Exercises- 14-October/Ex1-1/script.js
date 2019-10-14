@@ -15,25 +15,52 @@
 // console.log(checkCity("istanbul", ["Ankara", "Hamburg", "istanbul", "Mardin"]));
 
 
-function checkCity (city, cities) {
+function checkCity (visitedCities, cities) {
 
     let newArr = [];
     let matches = false;
 
     for (let i = 0; i<cities.length; i++) {
         matches = false;
-        for (let x = 0; x<city.length; x++) {
-            if (cities[i] === city [x])
+        for (let x = 0; x<visitedCities.length; x++) {
+            if (cities[i] === visitedCities [x]){
             matches = true;
+            }
         }
         
-        if(matches) 
+        if(!matches) 
             {newArr.push(cities[i])}
         
     }
     
-    return newArr;
+
+    return `I visited ${newArr} .`;
 }
 
 
-console.log(checkCity(["Kalana", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin"]));
+document.write(checkCity(["Kalana", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin"]));
+
+
+function checkCity (visitedCities, cities) {
+
+    let newArr = [];
+ 
+
+    for (let i = 0; i<cities.length; i++) {
+ 
+        for (let x = 0; x<visitedCities.length; x++) {
+            if (cities[i] === visitedCities [x])
+            newArr.push(cities[i])
+        }
+       
+        
+    }
+    
+    let newArr2 = newArr.join(', ')
+    return `I visited ${newArr2} .`;
+}
+
+
+// document.write(checkCity(["Tokyo", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin", "Kalana", "Tokyo"]));
+
+
