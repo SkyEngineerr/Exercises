@@ -15,52 +15,63 @@
 // console.log(checkCity("istanbul", ["Ankara", "Hamburg", "istanbul", "Mardin"]));
 
 
-function checkCity (visitedCities, cities) {
+// function checkCity (visitedCities, cities) {
 
-    let newArr = [];
-    let matches = false;
+//     let newArr = [];
+//     let matches = false;
 
-    for (let i = 0; i<cities.length; i++) {
-        matches = false;
-        for (let x = 0; x<visitedCities.length; x++) {
-            if (cities[i] === visitedCities [x]){
-            matches = true;
-            }
-        }
+//     for (let i = 0; i<cities.length; i++) {
+//         matches = false;
+//         for (let x = 0; x<visitedCities.length; x++) {
+//             if (cities[i] === visitedCities [x]){
+//             matches = true;
+//             }
+//         }
         
-        if(!matches) 
-            {newArr.push(cities[i])}
+//         if(!matches) 
+//             {newArr.push(cities[i])}
         
-    }
+//     }
     
 
-    return `I visited ${newArr} .`;
-}
+//     return `I visited ${newArr} .`;
+// }
 
 
-document.write(checkCity(["Kalana", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin"]));
+// document.write(checkCity(["Kalana", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin"]));
 
 
-function checkCity (visitedCities, cities) {
+// function checkCity (visitedCities, cities) {
 
-    let newArr = [];
+//     let newArr = [];
  
 
-    for (let i = 0; i<cities.length; i++) {
+//     for (let i = 0; i<cities.length; i++) {
  
-        for (let x = 0; x<visitedCities.length; x++) {
-            if (cities[i] === visitedCities [x])
-            newArr.push(cities[i])
-        }
+//         for (let x = 0; x<visitedCities.length; x++) {
+//             if (cities[i] === visitedCities [x])
+//             newArr.push(cities[i])
+//         }
        
         
-    }
+//     }
     
-    let newArr2 = newArr.join(', ')
-    return `I visited ${newArr2} .`;
-}
+//     let newArr2 = newArr.join(', ')
+//     return `I visited ${newArr2} .`;
+// }
 
 
 // document.write(checkCity(["Tokyo", "Ankara", "Hamburg"], ["Ankara", "Hamburg", "istanbul", "Mardin", "Kalana", "Tokyo"]));
 
 
+function checkWord (word) {
+    if (word[word.length-1] == 's') {
+        return 'Plural'
+    }
+
+    return "It is not plural"
+
+}
+
+
+document.write(checkWord('Tree'));
