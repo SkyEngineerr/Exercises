@@ -16,7 +16,7 @@ function check (password) {
 
 console.log(check("e$ren1234"));
 
-///////////////////////new exercise: Create a function called DrEvil. It should take a single argument, an amount, and return '<amount> dollars', except it will add '(pinky)' at the end if the amount is 1 million. For example
+////////////////////////new exercise: Create a function called DrEvil. It should take a single argument, an amount, and return '<amount> dollars', except it will add '(pinky)' at the end if the amount is 1 million. For example
 
 function drEvil (value) {
 

@@ -8,6 +8,8 @@
   animation-fill-mode: backwards;
 }
 
+// animation
+
 @keyframes slider {
     0% {
         background-image: url('../images/2.jpg');
