@@ -23,13 +23,19 @@ re = /hello/i;
 // const result = str.match(re);
 // console.log(result);
 
-function checkWord (word, testWord) {
-    let ch = /testWord/i;
-    let result =  ch.test(word);
+function checkWord (word, test) {
+    let ch = /test/gi;
+    let result = ch.test(word);
     return result;
 }
 
 
-console.log(checkWord('kaLatemar', 'late'));
 
+console.log(checkWord("kaleman", 'a'));
 
+//4 search () - returns index of the first match,
+//if not found it returns -1
+
+const str = 'Hello There';
+const result = str.search(re);
+console.log(result);
