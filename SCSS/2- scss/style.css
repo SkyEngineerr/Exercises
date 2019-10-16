@@ -1,0 +1,13 @@
+.container {
+  width: 253px;
+}
+
+.container .subdiv {
+  float: left;
+  width: 300px;
+}
+
+.container .subdiv2 {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
