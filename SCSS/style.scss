@@ -1,5 +1,13 @@
+@import 'setting';
+
+$firstColor: orange;
+$secondColor: black;
+
 .container {
     font-size: 18px;
+    height:20px;
+    background-color:$firstColor;
+   
     h3{
         color: red;
     }
@@ -12,4 +20,8 @@
             color:green;
         }
     }
+    &:hover{
+        background-color: yellow;
+    }
 }
+
