@@ -1,40 +1,41 @@
-table tr {
-  width: 200px;
+table {
+  width: 100vw;
+  height: 500px;
 }
 
-tr:nth-child(1) {
-  background-color: #1e0a0a;
+table tr:nth-child(1) {
+  background-color: #ffffad;
 }
 
-tr:nth-child(2) {
-  background-color: #3c1414;
+table tr:nth-child(2) {
+  background-color: #ffff7a;
 }
 
-tr:nth-child(3) {
-  background-color: #5a1e1e;
+table tr:nth-child(3) {
+  background-color: #ffff47;
 }
 
-tr:nth-child(4) {
-  background-color: #782828;
+table tr:nth-child(4) {
+  background-color: #ffff14;
 }
 
-tr:nth-child(5) {
-  background-color: #963232;
+table tr:nth-child(5) {
+  background-color: #e0e000;
 }
 
-tr:nth-child(6) {
-  background-color: #b43c3c;
+table tr:nth-child(6) {
+  background-color: #adad00;
 }
 
-tr:nth-child(7) {
-  background-color: #d24646;
+table tr:nth-child(7) {
+  background-color: #7a7a00;
 }
 
-tr:nth-child(8) {
-  background-color: #f05050;
+table tr:nth-child(8) {
+  background-color: #474700;
 }
 
-tr:nth-child(9) {
-  background-color: #ff5a5a;
+table tr:nth-child(9) {
+  background-color: #141400;
 }
 /*# sourceMappingURL=style.css.map */
