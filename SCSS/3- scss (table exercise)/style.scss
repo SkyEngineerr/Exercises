@@ -1,0 +1,13 @@
+table {
+    tr{
+        width:200px;
+      
+    }
+}
+
+@for $var from 1 to 10 {
+    #{"tr:nth-child("$var")"}{
+        background-color: rgb(30*$var,10*$var,10*$var);
+        
+    }
+}
