@@ -1,0 +1,15 @@
+.container {
+    font-size: 18px;
+    h3{
+        color: red;
+    }
+    h1{
+        color:gray;
+    }
+    &>p{
+        color:blue;
+        span{
+            color:green;
+        }
+    }
+}
