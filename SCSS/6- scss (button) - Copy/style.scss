@@ -1,0 +1,19 @@
+
+
+
+@for $var from 1 to 100 {
+    #{"div:nth-child("+$var+")"}{
+        @if ($var % 3 == 0){
+            background-color:red;
+            border: 2px solid black;
+            height:10px;
+        }
+@else{
+        background-color:blue;
+        border: 2px solid black;
+        height:10px;
+        
+    }
+}
+}
+
