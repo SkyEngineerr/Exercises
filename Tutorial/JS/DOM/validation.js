@@ -8,10 +8,37 @@ document.getElementById('phone').addEventListener('blur', validatePhone);
 //Implementing the validators
 function validateName (){
     const name = document.getElementById('name');
-    const re = /^[a-z]{2,10}$/i; 
+    const re = /^[a-z]{2,8}$/i; 
     if(!re.test(name.value)) {
         name.classList.add('is-invalid');
     } else {
-
+        name.classList.remove('is-invalid');
+    }
+}
+function validateZip (){
+    const name = document.getElementById('zip');
+    const re = /^[a-z]{2,8}$/i; 
+    if(!re.test(name.value)) {
+        name.classList.add('is-invalid');
+    } else {
+        name.classList.remove('is-invalid');
+    }
+}
+function validateEmail (){
+    const name = document.getElementById('email');
+    const re = /^[a-z]{2,8}$/i; 
+    if(!re.test(name.value)) {
+        name.classList.add('is-invalid');
+    } else {
+        name.classList.remove('is-invalid');
+    }
+}
+function validatePhone (){
+    const name = document.getElementById('phone');
+    const re = /^[a-z]{2,8}$/i; 
+    if(!re.test(name.value)) {
+        name.classList.add('is-invalid');
+    } else {
+        name.classList.remove('is-invalid');
     }
 }
