@@ -87,3 +87,30 @@ arr[3] = 'changed Value'
 console.log(arr);
 //but Not
 //arr = [44,55]
+
+
+function greeting (greetWord, name) {
+
+    return `${greetWord} ${name}`
+  }
+  
+  const greetingMe = greeting ('Hi', 'Me')
+  
+  console.log(greetingMe)
+
+
+  function findPhrase (text, phrase) {
+    let newArr = text.split(" ")
+    let newArr2 = [];
+   
+    for (let i = 0; i < newArr.length; i++) {
+      if (newArr[i] == 'rabit') {
+        newArr2.push(newArr[i])
+      }
+    }
+
+    console.log(`Rabit repeats ${newArr2.length} times in the text`)
+}
+
+let text1= 'The rabit was jumpin rabit all the time'
+const num = findPhrase(text1, 'rabit')
