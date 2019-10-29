@@ -44,9 +44,14 @@ let x = {
     name:'EREN',
     age: 30
 }
-
-let y = 1200;
 let a,b;
+let y = 1200;
+b = y;
+console.log(b);
+console.log(y)
+y = 1;
+console.log(b);
+console.log(y)
 a = x;
 
 console.log(a);
