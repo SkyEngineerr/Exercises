@@ -50,3 +50,12 @@ console.log(typeof par);
 console.log(par.toFixed(2)); //xxx.xx
 //console.log(par.length);
 //console.log(par === val);
+
+function checkNan (x) {
+    if (isNaN(x)) {
+        return NaN;
+    }
+    return x;
+}
+
+console.log(checkNan('hello'));
