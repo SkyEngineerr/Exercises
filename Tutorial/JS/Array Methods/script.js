@@ -32,6 +32,13 @@ val = numbers.splice(0, 1);
 console.log(numbers)
 console.log(val)
 
+//Slice
+val = numbers.slice(1,5)
+console.log(val);
+
+//Reverse
+numbers.reverse();
+
 
 
 
