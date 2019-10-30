@@ -61,17 +61,29 @@ val = numbers.sort(
 );
 console.log(val)
 
+//join method
+let str = 'Eren am I there Hello'
+console.log(str);
+let arr = str.split(' ')
+arr = arr.reverse();
+str = arr.join(' ')
+console.log(arr);
+console.log(str);
 
-function basisResult (arr) {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < 50) {
-      newArr.push(arr[i])
-    }
-  }
-  console.log(newArr)
-  return `${newArr.length} people did not pass the exam. The percentage is: % ${Math.floor((newArr.length/arr.length)*100)}`
-}
 
-basisResult ([78, 82, 45,20, 69, 23, 91, 55, 39, 66, 60, 100])
+// function basisResult (arr) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < 50) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   console.log(newArr)
+//   return `${newArr.length} people did not pass the exam. The percentage is: % ${Math.floor((newArr.length/arr.length)*100)}`
+// }
+
+// basisResult ([78, 82, 45,20, 69, 23, 91, 55, 39, 66, 60, 100])
+
+
+
 
