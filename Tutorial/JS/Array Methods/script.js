@@ -39,6 +39,39 @@ console.log(val);
 //Reverse
 numbers.reverse();
 
+//concat
+
+val = numbers.concat(numbers2)
+console.log(val);
 
 
+// Sorting arrays
+
+val = fruits.sort();
+
+//val = numbers.sort();
+console.log(val)
+
+// Use "compare function"
+
+val = numbers.sort(
+   function(x, y){
+       return x - y;
+   }
+);
+console.log(val)
+
+
+function basisResult (arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 50) {
+      newArr.push(arr[i])
+    }
+  }
+  console.log(newArr)
+  return `${newArr.length} people did not pass the exam. The percentage is: % ${Math.floor((newArr.length/arr.length)*100)}`
+}
+
+basisResult ([78, 82, 45,20, 69, 23, 91, 55, 39, 66, 60, 100])
 
