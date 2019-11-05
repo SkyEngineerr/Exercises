@@ -71,27 +71,3 @@ todo.edit(4);
 console.log(todo.newArr);
 
 
-function checkAll () {
-  for (let i =0; i<500; i++) {
-    if(i<100 ) {
-      containerCount += 1
-      weight += 10
-    }
-
-    else if(i<200 ) {
-       containerCount += 1
-        weight += 20
-    }
-    else if(i<250 0) {
-       containerCount += 1
-        weight += 50
-    }
-    else if(i<300 ) {
-       containerCount += 1
-        weight += 100
-    }
-    else if(i<300 ) {
-       containerCount += 1
-        weight += 100
-    }
-}
