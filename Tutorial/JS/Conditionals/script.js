@@ -61,33 +61,3 @@ function payLess2 (arr, name1, name2) {
 
 let arr = ['Eren' , 'Ali' , 'Filiz']
 payLess2(arr, 'Eren', 'Ahs');
-
-function checkSmart (object) {
-    let cashierBalance = 0;
-     return object.smartphone ? cashierBalance + object.smartphonePrice:
-     cashierBalance + 0
-  }
-  
-  let obj = {
-    smartphone: true,
-    smartphonePrice:300,
-    headphones: false,
-    headphonesPrice: 50,
-    cover: false,
-    coverPrice:20
-  }
-  checkSmart(obj)
-
-
-  function checkDay (date1) {
-
-    let convertDate = new Date (date1)
-    let specDay = convertDate.getDay()
-    return specDay == 0 ? `It is Sunday`:
-    specDay == 6 ? `It is Saturday`:
-    `It is not weekend`
-  
-  }
-  
-  
-  checkDay ('August 19, 1975 23:15:30')
