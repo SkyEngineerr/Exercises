@@ -27,4 +27,6 @@ function checkDay (color) {
   }
   
   checkDay("yellow")
+
+  
   
