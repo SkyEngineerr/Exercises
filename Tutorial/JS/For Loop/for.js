@@ -36,8 +36,18 @@ do{
     j--;
 }while(t > 0)
 
+const users = [
+    {id:1, name:'Andri'}
+    {id:2, name:'ALI'}
+    {id:3, name:'EREN'}
+    {id:4, name:'AKAL'}
+];
 
+const ids = users.map(function(u){
+    return u.id
+})
 
+console.table(ids)
 
 let food = ['Pizza', 'Kebab', 'Doner']
 for (let counter = 0; counter < food.length; counter++){
