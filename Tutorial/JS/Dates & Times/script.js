@@ -29,19 +29,51 @@
 // birthday.setSeconds(00);
 // console.log(birthday)
 
-let persons = [
-    {id:1, name:'eren'},
-    {id:2, name:'eren2'},
-    {id:3, name:'eren3'},
-    {id:4, name:'eren4'},
+let workers = [
+    {id:1, job:'Maschine Learn Engineer', salary:10000},
+    {id:2, job:'Data Analyst', salary:7500},
+    {id:3, job:'Web-Dev Full Stack', salary:3000},
+    {id:4, job:'Web-Dev Full Stack', salary:3000},
+    {id:5, job:'Web-Dev Backend', salary:2000},
+    {id:6, job:'Web-Dev Backend', salary:2000},
+    {id:7, job:'Web-Dev Backend', salary:2000},
+    {id:8, job:'Web-Dev Backend', salary:2000},
+    {id:9, job:'Web-Dev Front-end', salary:1500},
+    {id:10, job:'Web-Dev Front-end', salary:1500},
+    {id:11, job:'Web-Dev Front-end', salary:1500},
+    {id:12, job:'Web-Dev Front-end', salary:1500},
+    {id:13, job:'Normal Workers', salary:50000},
+    {id:14, job:'DevOp Engineer', salary:5000},
+    {id:15, job:'DevOp Engineer', salary:5000},
+    {id:16, job:'DevOp Engineer', salary:5000},
+    {id:17, job:'DevOp Engineer', salary:5000},
+    {id:18, job:'DevOp Engineer', salary:5000},
+    {id:19, job:'Project Manager', salary:4000},
+    {id:20, job:'Project Manager', salary:4000},
+    {id:21, job:'Project Manager', salary:4000},
+    {id:22, job:'Project Manager', salary:4000}
 ]
 
-let ids = persons.map(function(item,index,array){
-    if (item.id % 2 == 0) {
-        return item
+let budget = 100000;
+let whatIpaid = 0;
+let iDidNotPay = 0;
+
+for (let person of workers) {
+    if ((whatIpaid+person.salary) < budget){
+        whatIpaid = whatIpaid + person.salary
+        
     }
-})
+    else if( (whatIpaid+person.salary) > budget) {
+        iDidNotPay += person.salary
+        console.log(person);
+    }
+    
+  
+}
 
-console.log(ids);
+console.log(whatIpaid);  
+console.log(iDidNotPay);  
 
-let cars
+return `I paid ${whatIpaid}$. Still I have ${budget - whatIpaid}$. But I could not pay ${iDidNotPay}$. Here is a list for who did not receive their money: ${whoDidNotRec}`
+
+window
