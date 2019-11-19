@@ -57,4 +57,4 @@ liEven.forEach (function(li, index) {
   li.style.background= 'yellow'
 })
 
-console.log(liOdd);
+console.log(liOdd)
