@@ -1,7 +1,20 @@
 //document.getElementsByClassName
+//const listItems = document.querySelector('ul').getElementsByClassName('collection-item')
+
+
 const items = document.getElementsByClassName('collection-item')
 console.log(items);
-let val = document.querySelector('h5')
-console.log(val);
+items[0].style.color= 'red'
+items[2].textContent ='Hello'
+
+
+//document.getElementsByTagName('li')
+
+let lis =  document.getElementsByTagName('li')
+console.log(lis);
+
+
+
+
 
 
