@@ -11,14 +11,14 @@
 //document.getElementsByTagName('li')
 
 let lis =  document.getElementsByTagName('li')
-// let colors = ['brown','green','orange','red','blue']
-// let texts = ['brown','green','orange','red','blue']
-// for (let i =0; i<lis.length; i++) {
+let colors = ['brown','green','orange','red','blue']
+let texts = ['brown','green','orange','red','blue']
+for (let i =0; i<lis.length; i++) {
   
 //   lis[i].textContent = `The color is ${texts[i]}`
 //   lis[i].style.color = colors[i]
 
-// }
+}
 
 // console.log(lis);
 
@@ -28,6 +28,12 @@ let lis =  document.getElementsByTagName('li')
 lis = Array.from(lis);
 
 console.log(lis);
+
+lis.reverse();
+
+lis.forEach(function(item,index){
+  item.innerHTML = `<span style='color:red;'>${index} : Hello</span> `
+})
 
 
 
