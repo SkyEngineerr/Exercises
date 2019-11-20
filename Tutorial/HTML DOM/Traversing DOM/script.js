@@ -17,12 +17,12 @@ let val2 = Array.from(val)
 //console.log(val)
 
 
-  val2.forEach(function(item){
+  // val2.forEach(function(item){
   
-    if(item.innerText == 'Hello'){
-      item.style.color = 'red'
-    }
-  })
+  //   if(item.innerText == 'Hello'){
+  //     item.style.color = 'red'
+  //   }
+  // })
 
 // 1=Element
 // 2=Attribute
@@ -35,10 +35,10 @@ let val2 = Array.from(val)
 val = list.children;
 val = val[0].className
 val = list.children[1].innerText
-console.log(val);
+//console.log(val);
 
 list.children[0].children[0].id = 'test-link'
-console.log(list.children[0].children[0].children[0]);
+//console.log(list.children[0].children[0].children[0]);
 
 //First Child
 
@@ -46,6 +46,41 @@ val = list.firstChild;
 val = list.firstElementChild;
 val = list.firstElementChild.innerText
 val = list.lastElementChild.innerText
-val = list.children.length
-console.log(val);
+val = list.children.length // same: list.childElementCount
 
+
+//Get parent node
+val = listItem.parentNode
+val = listItem.parentElement
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
+
+
+////
+
+// val = list.children
+// val = Array.from(val)
+// console.log(val);
+
+// val.forEach(function(item){
+//   console.log(item);
+//   console.log(item.style.color );
+//   if(item.style.color == 'red') {
+//     item.innerText = 'DONE'
+//   }
+// })
+
+// let count =0;
+// val.forEach(function(item,index){
+  
+
+// if(item.innerText == 'DONE') {
+//     count += 1
+//   }
+// })
+
+// console.log(count);
+
+
+//get next sibling
+val = listItem.nextSibling
+console.log(val);
