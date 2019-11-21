@@ -33,3 +33,17 @@ console.log(li);
 
 ///////////////////////////////////
 
+/////EXERCISE/////
+
+let arr = ['do', 'something', 'now', 'or', 'quit!']
+
+arr.forEach(function(item){
+    
+    document.querySelector('ul.collection').appendChild(document.createElement('li')).appendChild(document.createTextNode(item))
+
+})
+
+
+const list = document.querySelector('ul.collection')
+console.log(list);
+
