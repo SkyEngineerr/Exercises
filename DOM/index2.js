@@ -1,49 +1,76 @@
-let header = document.querySelector('h1.title')
-header.style.textAlign='center'
-//console.log(header);
+//change font of body
+const body = document.querySelector("body");
+body.style.fontFamily = "Arial";
 
-let labels = document.getElementsByClassName('category')
-labels[0].style.color ='red'
-labels[0].style.fontStyle ='italic'
-labels[1].style.color ='blue'
-labels[1].style.fontStyle ='italic'
-labels[2].style.color ='brown'
-labels[2].style.fontStyle ='italic'
-//console.log(labels[0]);
+//styling of title and section
+const title = document.querySelector(".title");
+title.style.textAlign = "center";
 
-function colorGenerator () {
-    let myArray = ['#7973C3', '#96A9D5','#613764','#CEE9ED', '#96A9D5', '#6D457D']
-    let rand = myArray[Math.floor(Math.random() * myArray.length)];
-    return rand
+const mainSection = document.querySelector(".main");
+mainSection.style.display = "flex";
+mainSection.style.flexFlow = "row wrap";
+mainSection.style.justifyContent = "space-around"
+
+//change styling of h2 elements
+const menuCategories = document.querySelectorAll(".category");
+for (let i = 0; i < menuCategories.length; i++) {
+    category = menuCategories[i].style;
+    category.fontStyle = "italic"
+    category.fontSize = "2rem";
+    category.borderBottom = "1px solid black";
 }
-colorGenerator ()
+console.log(menuCategories);
 
-let unordered = document.querySelectorAll('ul.food-category')
-unordered[0].style.backgroundColor = colorGenerator ()
-unordered[1].style.backgroundColor = colorGenerator ()
-unordered[2].style.backgroundColor = colorGenerator ()
-//console.log(unordered);
+//change font size of warning at bottom of page
+let warning = document.getElementById("warning");
+warning.style.fontSize = "2rem";
+warning.style.marginBottom = "0";
+warning.style.marginLeft = "1.5rem";
 
-/////
-/////
+//color generator
+function colorGenerator() {
+    let letters = '0123456789ABCDEF';
+    let randomColor = "#";
+    for (let j = 0; j < 6; j++) {
+        randomColor += letters[Math.floor(Math.random() * 16)];
+    }
+    randomColor += "50";
+    return randomColor;
+}
 
+//assigning a random color to each list item
+const foodCategories = document.querySelectorAll(".food-category");
+for (let i = 0; i < foodCategories.length; i++) {
+    let categories = foodCategories[i].style;
+    categories.backgroundColor = colorGenerator();
+    categories.width = "20rem";
+    categories.height = "10rem";
+    categories.margin = "1rem";
+}
 
-let warning = document.querySelector('h3#warning')
-warning.style.fontSize = "x-large";
-warning.style.font = "italic bold 20px arial,serif";
-//console.log(warning);
-
-let allergy = document.querySelectorAll('li.allergy-info:nth-child(even)')
-allergy = Array.from(allergy)
-allergy.forEach(function(item){
-    item.style.backgroundColor = 'red'
+const foodItems = document.querySelectorAll(".food-item");
+foodItems.forEach(item => {
+    item.style.marginTop = "1rem";
 })
 
-let warn = document.getElementsByClassName('allergy-warning')
-warn[0].style.textAlign='center'
-//console.log(warn[0].style);
+// allergies section - add styling
+const allergySection = document.querySelector(".allergy-warning");
+allergySection.style.display = "flex";
+allergySection.style.flexFlow = "column";
+allergySection.style.justifyContent = "center";
+allergySection.style.alignItems = "center";
 
-//FOOTER
+const allergyList = document.querySelector(".allergies");
+allergyList.style.width = "20rem";
+allergyList.style.listStyle = "none";
+allergyList.style.marginTop = "1rem";
+
+const allergyItems = document.querySelectorAll(".allergy-info:nth-child(2n)");
+allergyItems.forEach(item => {
+    item.style.backgroundColor = "skyblue";
+})
+
+//footer descriptions
 const footer = document.querySelector(".footer");
 footer.style.display = "flex";
 footer.style.flexFlow = "row wrap";
@@ -61,9 +88,3 @@ description.forEach(footerDesc => {
     desc.alignItems = "center";
     desc.margin = "1rem";
 })
-
-
-
-
-
-
