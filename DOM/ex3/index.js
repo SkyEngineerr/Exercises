@@ -1,4 +1,4 @@
-const books = [
+const books1 = [
   {
     title: "The Design of EveryDay Things",
     author: "Don Norman",
@@ -28,22 +28,29 @@ const books = [
   }
 ];
 
+/// ORDERING OBJECT TO FIRST CHARACTER OF AUTHOR'S SURNAME
+var books = books1.slice(0);
+books.sort(function(a,b) {
+    var x = a.author.split(" ")[1][0].toLowerCase();
+    var y = b.author.split(" ")[1][0].toLowerCase();
+    return x < y ? -1 : x > y ? 1 : 0;
+});
+//////////////////////////////////////////////////////////
 
-const mainDiv = document.querySelector('div.container')
+const mainDiv = document.querySelector('div.row')
 
 for (let i = 0; i<4; i++) {
     mainDiv.appendChild(document.createElement('div'))
 }
 
-let divCard = document.querySelector('div.container').querySelectorAll("div");
+let divCard = document.querySelector('div.row').querySelectorAll("div");
 console.log(divCard);
 
 divCard.forEach(function(item){
-    item.className = "card col-lg-3 col-md-3 col-sm-6 col-xs-12"
+    item.className = "card col-lg-3 col-md-3 col-sm-6 col-xs-12 "
     item.style.width = "18rem";
-    item.appendChild(document.createElement('div')).className = 'card-body'
     item.appendChild(document.createElement('img')).className = 'card-img-top'
-    
+    item.appendChild(document.createElement('div')).className = 'card-body'
 })
 
 let divCardBody = document.querySelectorAll('.card-body')
@@ -51,29 +58,43 @@ divCardBody = Array.from(divCardBody)
 divCardBody.forEach(function(item){
     item.appendChild(document.createElement('h5')).className = 'card-title'
     item.appendChild(document.createElement('p')).className = 'card-text'
-    item.appendChild(document.createElement('a')).className = 'btn btn-primary'
-    
+    item.appendChild(document.createElement('a')).className = 'btn'
 })
-let headers = document.querySelectorAll(".card-title")
-
-for (let i = 0; i<headers.length; i++) {
-    headers[i].appendChild(document.createTextNode(books[i].title))
-}
-
-let cardText = document.querySelectorAll(".card-text")
-    
-for (let i = 0; i<cardText.length; i++) {
-    cardText[i].appendChild(document.createTextNode(books[i].author))
-}
 
 let images = document.querySelectorAll(".card-img-top")
 for (let i = 0; i<images.length; i++) {
     images[i].src = books[i].img
 }
+
+let headers = document.querySelectorAll(".card-title")
+for (let i = 0; i<headers.length; i++) {
+    headers[i].appendChild(document.createTextNode(books[i].title))
+}
+
+let cardText = document.querySelectorAll(".card-text")   
+for (let i = 0; i<cardText.length; i++) {
+    cardText[i].appendChild(document.createTextNode(books[i].author.split(" ")[1] + ", " + books[i].author.split(" ")[0]))
+}
+
+let buttons = document.querySelectorAll(".btn") 
+for (let i = 0; i<buttons.length; i++) {
+  if(books[i].alreadyRead == true) {
+    buttons[i].className = "btn btn-success"
+    buttons[i].appendChild(document.createTextNode("read"))
+  }
+  else {
+    buttons[i].className = "btn btn-secondary"
+    buttons[i].appendChild(document.createTextNode("to read"))
+  }
+  buttons[i].style.color = "white"
+}
+
+
+
+
+
+
 console.log(divCardBody);
-
-
-
 console.log(mainDiv);
 
 
