@@ -19,9 +19,14 @@ const parentElement = oldHeading.parentElement // Same above
 //Replace
 cardAction.replaceChild(newHeading, oldHeading)
 
-//Replace textnode
-const li =document.querySelector('li')
+//Remove Element
+// const lis = document.querySelectorAll('li');
+// const list = document.querySelectorAll("ul")
+// lis[0].remove();
 
+// const li2 = list.children[0]
+// list.removeChild(li2)
+// console.log(lis);
 
 
 ///EXERCISE REPLACE TEXT INNER LI LIST///
@@ -33,4 +38,15 @@ const li =document.querySelector('li')
 
 // li.replaceChild(text, firstText)
 /////////////////////////////////////////
+
+
+///EXERCISE 2//////////////////////
+let texts = document.querySelectorAll('li')
+
+texts.forEach(function(item){
+   console.log(item.firstChild);
+    if(item.innerText == "DONE") {
+      item.remove()
+    }
+})
 
