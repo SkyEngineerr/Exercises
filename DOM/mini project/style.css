@@ -1,6 +1,31 @@
+body {
+    background-color: #F0EBF8
+}
+
+.container {
+    position: relative;
+    display: block;
+}
+
 .color{
     background-color: #673AB7;
-    height:200px;
-    
-   
+    height:278px;
 }
+
+#table1 {
+    width: 640px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: white;
+    position: absolute;
+    box-shadow: 0.5px 1px 2px gray;
+    
+}
+
+#up-color {
+    background-color: #AE79FF;
+    height: 10px;
+}
+
+
