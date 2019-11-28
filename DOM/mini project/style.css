@@ -1,10 +1,7 @@
 body {
-    background-color: #F0EBF8
-}
-
-.container {
-    position: relative;
-    display: block;
+    background-color: #F0EBF8;
+    margin: 0;
+    padding: 0;
 }
 
 .color{
@@ -12,7 +9,14 @@ body {
     height:278px;
 }
 
-#table1 {
+#main-div {
+    height: 1500px;
+    background-color: white;
+    position: absolute;
+    top: 30vh; 
+}
+
+/* #table1 {
     width: 640px;
     top: 30%;
     left: 50%;
@@ -21,11 +25,11 @@ body {
     position: absolute;
     box-shadow: 0.5px 1px 2px gray;
     
-}
+}*/
 
 #up-color {
     background-color: #AE79FF;
     height: 10px;
-}
+} 
 
 
