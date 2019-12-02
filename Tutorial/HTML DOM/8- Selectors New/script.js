@@ -23,41 +23,53 @@ let firstDiv = document.getElementById("fDiv")
 
 //////////////////////////////////////////////////
 
-let header = document.getElementById('header')
-header.style.backgroundColor = "yellow"
+// let header = document.getElementById('header')
+// header.style.backgroundColor = "yellow"
 
-let row1 = document.getElementById('row1')
-row1.style.backgroundColor = "yellowgreen"
+// let row1 = document.getElementById('row1')
+// row1.style.backgroundColor = "yellowgreen"
 
-let row2 = document.getElementById('row2')
-row2.style.backgroundColor = "orange"
+// let row2 = document.getElementById('row2')
+// row2.style.backgroundColor = "orange"
 
 
 
-document.getElementById('spec').style.backgroundColor = "purple"
+// document.getElementById('spec').style.backgroundColor = "purple"
 
 
 let body = document.querySelector('body');
 let table = document.createElement('table');
 body.appendChild(table)
-let first = table.childNodes[1]
 
-for (let i = 0; i<3; i++) {
-  let tr = document.createElement('tr');
-  table.appendChild(tr)
+for (let i = 0; i<12; i++) {
+   if(i < 3) {
+    let tr = document.createElement('tr');
+    table.appendChild(tr)
+   }
+   else if(i < 6 && i >= 3) {
+    let th = document.createElement('th')
+    th.appendChild(document.createTextNode('HEADER'))
+    table.firstChild.appendChild(th);
+    th.style.backgroundColor = 'yellow'
+   }
+   else if (i<9 && i >= 6) {
+    let td = document.createElement('td')
+    td.appendChild(document.createTextNode('name'))
+    table.childNodes[1].appendChild(td)
+    td.style.backgroundColor = 'yellowgreen'
+   }
 
-  let th = document.createElement('th')
-  th.appendChild(document.createTextNode('HEADER'))
-  table.firstChild.appendChild(th);
+   else if (i >= 9) {
+    let td = document.createElement('td')
+    td.appendChild(document.createTextNode('name'))
+    table.childNodes[2].appendChild(td)
+    td.style.backgroundColor ='pink'
+   }
+
+
 }
 
 
-for (let j = 0; j < 3; j++) {
-  let td = document.createElement('td')
-  td.appendChild(document.createTextNode('name'))
-  table.childNodes[1].appendChild(td)
-  table.childNodes[2].appendChild(td)
-}
 
 
 
