@@ -65,10 +65,34 @@ for (let i = 0; i<12; i++) {
     table.childNodes[2].appendChild(td)
     td.style.backgroundColor ='pink'
    }
-
-
 }
 
+
+
+function createTable () {
+  const body1 = document.querySelector('body')
+  const tbl = document.createElement('table')
+  const tblBody = document.createElement('tbody')
+
+  for (let i=0; i <=3; i++){
+    const row = document.createElement('tr')
+    for (let j=0; j<3; j++) {
+      const cell = document.createElement('td')
+      const cellText = document.createTextNode('cell is row'+i+' ,and column '+j)
+      cell.id=(j+""+i)
+      cell.appendChild(cellText)
+      row.appendChild(cell)
+    }
+    tblBody.appendChild(row)
+    
+  }
+  tbl.appendChild(tblBody)
+  body1.appendChild(tbl)
+
+  console.log(cell.id);
+}
+
+createTable ()
 
 
 
