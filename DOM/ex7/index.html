@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="img" src="bulboff.gif">
+    <p>Turn On or Turn Off</p>
+
+    <p>Enter your name</p>
+    <input type="text">
+
+     
+    <script>
+        let image = document.querySelector('img');
+        image.addEventListener('mousedown', lamp)
+        image.addEventListener('mouseup', lamp)
+       
+        function lamp(event) { 
+            if(event.type == 'mousedown') {
+                image.src = "bulbon.gif" 
+            }
+             else if (event.type == 'mouseup') {
+                image.src = "bulboff.gif"  
+            }
+        }
+
+        
+    </script>
+
+
+</body>
+
+</html>
