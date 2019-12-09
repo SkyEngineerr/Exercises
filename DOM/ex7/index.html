@@ -13,8 +13,8 @@
     <img id="img" src="bulboff.gif">
     <p>Turn On or Turn Off</p>
 
-    <p>Enter your name</p>
-    <input type="text">
+    <p>Enter your name: <input type="text" id="inpt"></p>
+    
 
      
     <script>
@@ -31,7 +31,20 @@
             }
         }
 
+        //let input = document.querySelector('input')
+        inpt.addEventListener('focus', color)
+        inpt.addEventListener('blur', color)
+        function color (e) {
+            if(e.type == 'focus') {
+                e.target.style.background = 'pink'
+            }
+            else if(e.type == 'blur') {
+                e.target.style.background = ''
+            }
+           
+        }
         
+
     </script>
 
 
