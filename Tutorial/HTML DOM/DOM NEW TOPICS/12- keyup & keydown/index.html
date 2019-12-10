@@ -10,30 +10,30 @@
 </head>
 
 <body>
-  <form>Prevent default for: 
-    <input type="checkbox" name="keydown" id="prevent1" checked>
-    <label for="prevent1">Keydown:</label>
-    <input type="checkbox" name="keyup"id="prevent">
-    <label for="prevent2">Keyup:</label>
-  </form>
+    <form id="form" onsubmit="return false">
 
-  <form>
-    Ignore: 
-    <input type="checkbox" name="keydown" id="ignore1">
-    <label for="ignore1">Keydown:</label> 
-    <input type="checkbox" name="keyup" id="ignore2">
-    <label for="ignore2">Keyup:</label>
-  </form>
+        Prevent default for:
+        <label>
+          <input type="checkbox" name="keydownStop" value="1"> keydown</label>&nbsp;&nbsp;&nbsp;
+        <label>
+          <input type="checkbox" name="keyupStop" value="1"> keyup</label>
+    
+        <p>
+          Ignore:
+          <label>
+            <input type="checkbox" name="keydownIgnore" value="1"> keydown</label>&nbsp;&nbsp;&nbsp;
+          <label>
+            <input type="checkbox" name="keyupIgnore" value="1"> keyup</label>
+        </p>
+    
+        <p>Focus on the input field and press a key.</p>
+    
+        <input type="text" placeholder="Press keys here" id="kinput">
+      </br>
+        <textarea id="area"></textarea></br>
+        <input type="button" value="Clear" onclick="area.value = ''" />
+      </form>
 
-  <p>Focus on the input field and press a key</p>
-
-  <input type="text" name="" id="kinput"> </br>
-  <textarea rows="4" cols="50">
-
-
-  </textarea>
-  </br>
-  <button type="submit">Clear</button>
 
   <script src="script.js">
   </script>

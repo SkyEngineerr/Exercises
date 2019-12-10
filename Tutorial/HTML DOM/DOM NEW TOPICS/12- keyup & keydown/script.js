@@ -1,35 +1,30 @@
-let inpt = document.querySelector("#kinput")
-let txtarea = document.querySelector("textarea")
+kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
 
-
-inpt.addEventListener('keydown', listener)
-inpt.addEventListener('keyup', listener)
-
-
-function listener (e) {
-    if(e.type == 'click') {
-        inpt.preventDefault()
-    }
-    if (e.type == 'keydown') {
-        txtarea.innerHTML = e.key
-        console.log(e.target);
-        
-    }
-    else if (e.type == 'keyup'){
-        txtarea.innerHTML = e.key
-    }
-}
-
-inpt.onkeydown = inpt.onkeyup = kinput.onkeypress = handle;
 let lastTime = Date.now();
 
-function handle (e) {
-    console.log(form.elements);
+function handle(e) {
+
+    if (form.elements[e.type + 'Ignore'].checked) return;
+ 
+  let text = e.type +
+    ' key=' + e.key +
+    ' code=' + e.code +
+    (e.shiftKey ? ' shiftKey' : '') +
+    (e.ctrlKey ? ' ctrlKey' : '') +
+    (e.altKey ? ' altKey' : '') +
+    (e.metaKey ? ' metaKey' : '') +
+    (e.repeat ? ' (repeat)' : '') +
+    "\n";
+
+  if (area.value && Date.now() - lastTime > 250) {
+    area.value += new Array(81).join('-') + '\n';
+  }
+  lastTime = Date.now();
+
+  area.value += text;
+
+  if (form.elements[e.type + 'Stop'].checked) {
+    e.preventDefault();
+  }
+  
 }
-
-
-
-
-
-console.log(inpt);
-console.log(txtarea);
