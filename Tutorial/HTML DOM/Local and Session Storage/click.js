@@ -21,17 +21,18 @@
 // localStorage.clear()
 // console.log(x,y);
 
-function setItems (key, value) {
-  return localStorage.setItem(key, value)
-}
+// function setItems (key, value) {
+//   return localStorage.setItem(key, value)
+// }
 
-function removeItem (item) {
-  localStorage.removeItem(item)
-}
+// function removeItem (item) {
+//   localStorage.removeItem(item)
+// }
 
-function clearItems () {
-  localStorage.clear()
-}
+// function clearItems () {
+//   localStorage.clear()
+// }
+
 
 
 document.querySelector('form').addEventListener('submit', function(e){

@@ -1,0 +1,104 @@
+//set local storage item
+//the key and value should be string
+// localStorage.setItem('name', 'Eren')
+// localStorage.setItem('name', 'Seyma')
+// localStorage.setItem('age', '30')
+
+
+//set session storage item
+// sessionStorage.setItem('name', 'mr.smith')
+
+//remove from local storage
+
+//localStorage.removeItem('name')
+
+//get property from local storage
+// const x = localStorage.getItem('name')
+// const y = localStorage.getItem('age')
+
+
+//clear local storage
+// localStorage.clear()
+// console.log(x,y);
+
+// function setItems (key, value) {
+//   return localStorage.setItem(key, value)
+// }
+
+// function removeItem (item) {
+//   localStorage.removeItem(item)
+// }
+
+// function clearItems () {
+//   localStorage.clear()
+// }
+
+let ul = document.querySelector('.collection');
+
+
+let li;
+let aTag;
+let iTag;
+
+document.querySelector('form').addEventListener('submit', function(e){
+  const task = document.getElementById('task').value;
+
+  let tasks;
+
+  if(localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  tasks.push(task);
+
+  li = document.createElement('li')
+  aTag = document.createElement('a')
+  iTag = document.createElement('i')
+
+  li.className = 'collection-item'
+  li.appendChild(document.createTextNode(task))
+
+  aTag.href = "#"
+  aTag.className ="delete-item secondary-content"
+  iTag.className = "fa fa-remove"
+  
+  aTag.appendChild(iTag)
+  li.appendChild(aTag)
+  ul.appendChild(li)
+  
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  alert('Task saved');
+
+  e.preventDefault();
+});
+
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+
+
+tasks.forEach(function(task){
+  li = document.createElement('li')
+  aTag = document.createElement('a')
+  iTag = document.createElement('i')
+
+  li.className = 'collection-item'
+  li.appendChild(document.createTextNode(task))
+
+  aTag.href = "#"
+  aTag.className ="delete-item secondary-content"
+  iTag.className = "fa fa-remove"
+  
+  aTag.appendChild(iTag)
+  li.appendChild(aTag)
+  ul.appendChild(li)
+})
+
+
+let aList = document.querySelectorAll('.delete-item')
+console.log(document.querySelector('li'));
+console.log(ul);
+console.log(document.querySelectorAll('.delete-item'));
+//localStorage.clear()
