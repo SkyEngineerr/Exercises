@@ -70,12 +70,12 @@ document.querySelector('form').addEventListener('submit', function(e){
   
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
-  alert('Task saved');
+  //alert('Task saved');
 
   e.preventDefault();
 });
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
+let tasks = JSON.parse(localStorage.getItem('tasks'));
 
 
 
@@ -97,8 +97,13 @@ tasks.forEach(function(task){
 })
 
 
-let aList = document.querySelectorAll('.delete-item')
-console.log(document.querySelector('li'));
-console.log(ul);
-console.log(document.querySelectorAll('.delete-item'));
-//localStorage.clear()
+
+let clear = document.querySelector('.clear-tasks')
+clear.addEventListener('click', deneme)
+
+function deneme (e){
+  localStorage.clear()
+}
+
+
+
