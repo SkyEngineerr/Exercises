@@ -60,9 +60,9 @@ document.querySelector('form').addEventListener('submit', function(e){
   li.className = 'collection-item'
   li.appendChild(document.createTextNode(task))
 
-  aTag.href = "#"
   aTag.className ="delete-item secondary-content"
   iTag.className = "fa fa-remove"
+  aTag.addEventListener('click', remove)
   
   aTag.appendChild(iTag)
   li.appendChild(aTag)
@@ -97,6 +97,18 @@ tasks.forEach(function(task){
 })
 
 
+function remove (e) {
+  const taskk = JSON.parse(localStorage.getItem('tasks'))
+  let ulList = document.querySelector(".collection");
+  console.log(ulList);
+  Array.from(ulList.children).forEach(function(item, i){
+    if(e.target.closest('li')==item){
+      taskk.splice(i,1)
+      ulList.removeChild(item)
+  }
+  })
+  localStorage.setItem('tasks', JSON.stringify(taskk))
+}
 
 let clear = document.querySelector('.clear-tasks')
 clear.addEventListener('click', deneme)
