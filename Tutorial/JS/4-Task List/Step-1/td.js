@@ -38,3 +38,16 @@ li.appendChild(document.createTextNode(tasks[j]))
 document.querySelector('ul.collection').appendChild(li)
 }
 }}
+
+function removing(e){
+    const taskk = JSON.parse(localStorage.getItem('tasks'))
+    let ul = document.querySelector('.collection')
+    console.log(Array.from(ul.children))
+    Array.from(ul.children).forEach(function(item, i){
+        if(e.target.closest('li')==item){
+            taskk.splice(i,1)
+        }
+    })
+    localStorage.setItem('tasks', JSON.stringify(taskk))
+    createLi()
+}

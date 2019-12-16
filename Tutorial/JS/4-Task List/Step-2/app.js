@@ -5,7 +5,7 @@ const clearBtn = document.querySelector('.clear-tasks')
 const filter = document.querySelector('#filter')
 const taskInput = document.querySelector('#task')
 
-console.log(form, clearBtn, filter, taskInput);
+//console.log(form, clearBtn, filter, taskInput);
 
 
 
@@ -45,4 +45,22 @@ function addTask(e){
     taskList.appendChild(li)
     taskInput.value = ''
 
+}
+
+
+function removeTask(e) {
+  //First Way: 
+        e.target.closest('.delete-item').parentElement.remove()
+  //Second Way:
+        //e.target.parentElement.parentElement.remove()
+
+}
+
+function clearTasks (e){
+    //First Way:
+        taskList.innerHTML = ""; 
+    
+    //Second Way:
+    
+   
 }
