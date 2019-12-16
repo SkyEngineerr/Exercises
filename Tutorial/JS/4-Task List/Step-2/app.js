@@ -50,17 +50,26 @@ function addTask(e){
 
 function removeTask(e) {
   //First Way: 
-        e.target.closest('.delete-item').parentElement.remove()
+        //e.target.closest('.delete-item').parentElement.remove()
   //Second Way:
         //e.target.parentElement.parentElement.remove()
+  //Third Way:
+    if(e.target.parentElement.classList.contains('delete-item')) {
+        if(confirm('Are you sure?')){
+            e.target.parentElement.parentElement.remove()
+        }
+    }
 
 }
 
 function clearTasks (e){
-    //First Way:
-        taskList.innerHTML = ""; 
+    //First Way(bad way):
+        //taskList.innerHTML = ""; 
     
     //Second Way:
-    
+        while(taskList.firstChild) {
+            taskList.removeChild(taskList.firstChild)
+        }
+
    
 }
