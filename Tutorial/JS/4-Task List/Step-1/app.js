@@ -6,7 +6,8 @@ const filter = document.querySelector('#filter')
 const taskInput = document.querySelector('#task')
 
 console.log(form, clearBtn, filter, taskInput);
-console.log(taskList);
+
+
 
 //Load all event listeners
 loadEventListeners();
@@ -17,14 +18,25 @@ function loadEventListeners() {
     form.addEventListener('submit', addTask)
 };
 
+
 //Add Task Event Handler
 function addTask(e){
     e.preventDefault();
     
+    if(!taskInput.value) {
+        alert('add a task')
+        return
+    }
     let li = document.createElement('li')
-    li.appendChild(document.createTextNode('Eren'))
+    li.className = 'collection-item'
+    li.appendChild(document.createTextNode(taskInput.value))
     let a = document.createElement('a')
+    a.className = 'delete-item secondary-content'
+    let i = document.createElement('i')
+    i.className = ' fa fa-remove'
+    a.appendChild(i)
     li.appendChild(a)
-
     taskList.appendChild(li)
+    taskInput.value = ''
+
 }
