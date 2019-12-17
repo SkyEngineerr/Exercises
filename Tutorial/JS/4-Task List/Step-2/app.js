@@ -47,7 +47,7 @@ function addTask(e){
     storeTaskInLocalStorage(taskInput.value)
     taskInput.value = ''
     
-    console.log(taskInput.value);
+   
 }
 
 //Store Task
@@ -87,8 +87,24 @@ function removeTask(e) {
 
 //Remove from LS
 function removeTaskFromLocalStorage (taskItem) {
+    let tasks;
+    let newArr;
+    if(localStorage.getItem('tasks') === null) {
+        tasks = []
+    }else{
+        tasks = JSON.parse(localStorage.getItem('tasks'))
+    }
 
+    tasks.forEach(function(item){
+        if (item == taskItem) {
+            newArr.push(item)
+        }
+    })
+
+    localStorage.setItem('tasks', JSON.stringify(tasks))
 }
+
+
 
 function clearTasks (e){
     //First Way(bad way):
