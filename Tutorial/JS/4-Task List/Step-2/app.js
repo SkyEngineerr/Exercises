@@ -43,8 +43,29 @@ function addTask(e){
     a.appendChild(i)
     li.appendChild(a)
     taskList.appendChild(li)
-    taskInput.value = ''
 
+    storeTaskInLocalStorage(taskInput.value)
+    taskInput.value = ''
+    
+    console.log(taskInput.value);
+}
+
+//Store Task
+function storeTaskInLocalStorage(task) {
+    
+    let tasks;
+    //getting the tasks Array from L.S. and checking if there is no tasks yet, define it as empty array
+    if(localStorage.getItem('tasks') === null) {
+        tasks = []
+    //else take it ready and assign it to tasks array
+    }else{
+        tasks = JSON.parse(localStorage.getItem('tasks'))
+    }
+    //push the task to it
+    tasks.push(task)
+    //save it back to the local storage
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+   
 }
 
 
@@ -57,8 +78,15 @@ function removeTask(e) {
     if(e.target.parentElement.classList.contains('delete-item')) {
         if(confirm('Are you sure?')){
             e.target.parentElement.parentElement.remove()
+
+            //Remove from LS
+            removeTaskFromLocalStorage(e.target.parentElement.parentElement)
         }
     }
+}
+
+//Remove from LS
+function removeTaskFromLocalStorage (taskItem) {
 
 }
 
