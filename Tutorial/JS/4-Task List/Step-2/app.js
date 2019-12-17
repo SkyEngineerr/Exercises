@@ -86,9 +86,35 @@ function removeTask(e) {
 }
 
 //Remove from LS
+// function removeTaskFromLocalStorage (taskItem) {
+//     let tasks;
+    
+//     if(localStorage.getItem('tasks') === null) {
+//         tasks = []
+//     }else{
+//         tasks = JSON.parse(localStorage.getItem('tasks'))
+//     }
+//     //console.log(taskItem);
+//     tasks.forEach(function(item,i){
+//         if (item == taskItem.textContent) {
+//            // console.log(item);
+//             tasks.splice(i,1)
+//         }
+//     })
+//     localStorage.setItem('tasks', JSON.stringify(tasks))
+// }
+
+//Remove from Ls BUT add to another array in Local Storage
 function removeTaskFromLocalStorage (taskItem) {
     let tasks;
-    
+    let deleteTasks;
+
+    if(localStorage.getItem('tasks') === null) {
+        deleteTasks = []
+    }else{
+        deleteTasks = JSON.parse(localStorage.getItem('deleteTasks'))
+    }
+
     if(localStorage.getItem('tasks') === null) {
         tasks = []
     }else{
@@ -97,11 +123,13 @@ function removeTaskFromLocalStorage (taskItem) {
     //console.log(taskItem);
     tasks.forEach(function(item,i){
         if (item == taskItem.textContent) {
-           // console.log(item);
+            deleteTasks.push(item)
             tasks.splice(i,1)
         }
-    })
+    }) 
+
     localStorage.setItem('tasks', JSON.stringify(tasks))
+    localStorage.setItem('deleteTasks', JSON.stringify(deleteTasks))
 }
 
 
