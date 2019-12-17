@@ -109,7 +109,7 @@ function removeTaskFromLocalStorage (taskItem) {
     let tasks;
     let deleteTasks;
 
-    if(localStorage.getItem('tasks') === null) {
+    if(localStorage.getItem('deleteTasks') === null) {
         deleteTasks = []
     }else{
         deleteTasks = JSON.parse(localStorage.getItem('deleteTasks'))
@@ -120,11 +120,11 @@ function removeTaskFromLocalStorage (taskItem) {
     }else{
         tasks = JSON.parse(localStorage.getItem('tasks'))
     }
+    
     //console.log(taskItem);
     tasks.forEach(function(item,i){
         if (item == taskItem.textContent) {
-            deleteTasks.push(item)
-            tasks.splice(i,1)
+            deleteTasks.push((tasks.splice(i,1).toString()))
         }
     }) 
 
