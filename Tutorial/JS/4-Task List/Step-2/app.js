@@ -88,19 +88,19 @@ function removeTask(e) {
 //Remove from LS
 function removeTaskFromLocalStorage (taskItem) {
     let tasks;
-    let newArr;
+    
     if(localStorage.getItem('tasks') === null) {
         tasks = []
     }else{
         tasks = JSON.parse(localStorage.getItem('tasks'))
     }
-
-    tasks.forEach(function(item){
-        if (item == taskItem) {
-            newArr.push(item)
+    //console.log(taskItem);
+    tasks.forEach(function(item,i){
+        if (item == taskItem.textContent) {
+           // console.log(item);
+            tasks.splice(i,1)
         }
     })
-
     localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
@@ -114,7 +114,12 @@ function clearTasks (e){
         while(taskList.firstChild) {
             taskList.removeChild(taskList.firstChild)
         }
+        clearLS()
 }
+function clearLS() {
+    localStorage.clear()
+}
+
 
 //Filter Tasks
 function filterTasks(e) { 
